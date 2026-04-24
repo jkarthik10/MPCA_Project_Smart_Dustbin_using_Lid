@@ -1,8 +1,8 @@
 # MPCA_Project_Smart_Dustbin_using_Lid
 
-Smart Dustbin Lid System
+🗑️ Smart Dustbin Lid System
 
- Overview
+📌 Overview 
 
 The Smart Dustbin Lid System is an automated solution designed to provide a touchless waste disposal experience, improving hygiene and reducing the spread of germs.
 
@@ -10,16 +10,16 @@ This project uses an ultrasonic sensor (HC-SR04) and a servo motor (SG90) contro
 
 The system works based on ultrasonic wave reflection, where the sensor detects objects within a specific distance and triggers the lid mechanism.
 
- Features
+🚀 Features
 
- Touchless Operation (No physical contact required)
- Ultrasonic Distance Detection
- Automatic Lid Opening & Closing
- Timed Operation (3 seconds delay)
- Fast and Efficient Response
- Improves Hygiene & Cleanliness
+🖐️ Touchless Operation (No physical contact required)
+📡 Ultrasonic Distance Detection
+🔄 Automatic Lid Opening & Closing
+⏱️ Timed Operation (3 seconds delay)
+⚡ Fast and Efficient Response
+🧼 Improves Hygiene & Cleanliness
 
-Components Used
+🛠️ Components Used:
 
 Arduino Uno (ATmega328P Microcontroller)
 HC-SR04 Ultrasonic Sensor
@@ -27,7 +27,14 @@ SG90 Servo Motor (Continuous Rotation)
 Jumper Wires
 Power Supply (9V Battery / USB)
 
-Working Principle
+🔌 Circuit Connections
+Component	Arduino Pin
+Ultrasonic Trigger	Pin 9
+Ultrasonic Echo	Pin 8
+Servo Motor Signal	Pin 10
+
+
+⚙️ Working Principle:
 
 The ultrasonic sensor continuously monitors the area in front of the dustbin.
 When an object (like a hand) comes within 20 cm, the system detects it.
@@ -41,7 +48,7 @@ Forward rotation → Lid opens
 Pause → Waste disposal
 Reverse rotation → Lid closes
 
-Pseudocode
+🧠 Pseudocode
 
 START
 Initialize Pins: Trig, Echo, Servo
@@ -59,7 +66,8 @@ LOOP:
   Wait 100 ms
 END LOOP
 
-Applications:
+
+🎯 Applications:
 
 Smart homes
 Public places (malls, stations)
@@ -67,27 +75,28 @@ Hospitals
 Schools & colleges
 Offices
 
-Advantages:
+📈 Advantages:
 
 Completely touch-free operation
 Reduces germ transmission
 Simple and low-cost design
 Easy to implement and maintain
+Real-time response
 
-Future Improvements:
+🔮 Future Improvements:
 
 IoT integration (mobile app monitoring)
 Automatic garbage level detection
 Solar-powered system
 Voice control / AI-based automation
-Real-time response
 
-Team Members
+👨‍💻 Team Members:
 
 Ganesh Aroda C
 J Karthik
 Divyansh Badaya
 
-Conclusion
+
+📄 Conclusion
 
 The Smart Dustbin Lid system provides a practical and efficient solution for hygienic waste disposal. By using ultrasonic sensing and automation, it eliminates the need for physical contact and contributes to cleaner and safer environments.
