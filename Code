@@ -1,0 +1,46 @@
+#include <Servo.h>
+
+const int trigPin = 9;
+const int echoPin = 8;
+const int servoPin = 10;
+
+Servo myServo;
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  myServo.attach(servoPin);
+  myServo.write(90); 
+}
+
+void loop() {
+  long duration;
+  int distance;
+
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration * 0.034 / 2;
+
+  if (distance > 0 && distance <= 20) {
+    // 1. OPEN: Spin forward for a brief moment to lift the lid
+    myServo.write(180); 
+    delay(170);         // Adjust this time until the lid is fully open
+    
+    // 2. HOLD: Stop the motor for 5 seconds
+    myServo.write(90);  
+    delay(3000); 
+    
+    // 3. CLOSE: Spin backward for a brief moment
+    myServo.write(0);   
+    delay(190);         // Match the timing of the "Open" step
+    
+    // 4. STOP: Keep it off until next detection
+    myServo.write(90);  
+  }
+  delay(100);
+}
